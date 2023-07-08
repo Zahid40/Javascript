@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")();
 
 //Guess Random Number
 let guess = 0; // number of guesses
-let a;
+let a = 0;
 let x = Math.random()*100  //it guesse like this (96.7456487754878)
 x = Math.floor(x) // Guesses b/w 1 to 100  >> it guesses like this (96)
 // console.log(x)
