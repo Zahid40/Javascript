@@ -25,7 +25,7 @@ for(let i = 0; i<100 ; i++){
             else if(x-a <= 20){
                 console.log("And You Far");
             }
-            else if(x-a <= 10){
+            else if(x-a <= 30){
                 console.log("And You are so Far");
             }
         }
@@ -40,7 +40,7 @@ for(let i = 0; i<100 ; i++){
             else if(a-x <= 20){
                 console.log("And You Far");
             }
-            else if(a-x <= 10){
+            else if(a-x <= 30){
                 console.log("And You are so Far");
             }
         }
