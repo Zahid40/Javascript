@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="id1">This is element 1 <span id="sp1">Hello</span></div>
+    <div class="box" id="id2">This is element 2</div>
+</body>
+<script>
+    let id1 = document.getElementById("id1");
+    let sp1 = document.getElementById("sp1");
+
+    //matches >>> find matches in an element of give css(class/id)
+    console.log(id1.matches(".wrongclass"))
+    console.log(id1.matches(".box"))
+
+    //closest >>> find matches on thiere ancestor untill found same css(class/id)
+    console.log(sp1.closest(".box"))
+    console.log(sp1.closest(".wrongclass"))
+
+    //constains >> check is given element contains require css(class/id)
+    console.log(id1.contains(sp1));
+    console.log(sp1.contains(id1));
+</script>
+</html>
