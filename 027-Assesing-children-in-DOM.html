@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>simple
+            <span>hi</span>
+        </p>
+    </div>
+</body>
+<script>
+    //Assesing first-child inside of an element
+    console.log(document.body.firstChild);
+
+    console.log(document.body.childNodes[0]) //for first element
+
+    //Assesing Last-child inside of an element
+    console.log(document.body.lastChild);
+
+    console.log(document.body.childNodes[document.body.childNodes.length - 1]) //for last element
+
+    //assesing all child inside of an element
+    console.log(document.body.childNodes);
+    //returning Node-List >> it seems like an array but its not.
+
+    //use Array.from() to convert into array
+    let arr = Array.from(document.body.childNodes);
+    console.log(arr)
+</script>
+
+</html>

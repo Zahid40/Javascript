@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>44</h1><p>444</p><div>44</div></body>
+    <script>
+        let ele = document.body.childNodes[1];
+        console.log("the element = ",ele)
+        //for "Next" or "Right" sibling of an element
+        console.log("Next-sibling of element = ",ele.nextSibling);
+        //for "Previous" or "Left" sibling of an element
+        console.log("Previous-sibling of element = ",ele.previousSibling)
+
+        //for assesing parent
+        //parentNode >> return parent-node of an element
+        console.log("parent of (p) element = ",document.body.childNodes[1]);
+
+        //parentelement >> returns parent of that element
+        console.log(document.body.childNodes[1]);
+    </script>
+</html>

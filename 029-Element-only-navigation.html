@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+</head>
+<style>
+    *{box-sizing: border-box;padding: 0;margin: 0;}
+    body{background-color: black;color:white;display: flex;justify-content: center;align-items: center;}
+    ul{list-style: none;display: flex;flex-direction: column;}
+    li{padding: 20px;background-color: rgb(255, 0, 0);margin: 10px;border-radius: 20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 200;text-align: center;}
+</style>
+<body>
+    <nav>
+        <ul>
+            <li>color</li>
+            <li>radius</li>
+            <li>Hire me</li>
+        </ul>
+    </nav>
+</body>
+<script>
+    let ele = document.body
+    console.log(ele)
+
+    //for assesing direct elements
+    console.log(ele.children) //return elements children
+    console.log(ele.firstElementChild); //return first element 
+    console.log(ele.lastElementChild);  // return last child
+
+    //test
+    
+    let randomval = ()=>{
+        let a = Math.random()*255
+        a = Math.floor(a);
+        return a;
+    }
+    let randomcol = ()=>{
+        let a = randomval();
+        let b = randomval();
+        let c = randomval();
+        let rr = document.body.firstElementChild.firstElementChild.firstElementChild.style.background = `rgb(${a},${b},${c})`;
+        console.log(rr)
+    }
+
+    let rradius = ()=>{
+        let r = Math.floor(Math.random()*100);
+        let br = document.body.firstElementChild.firstElementChild.children[1].style.borderRadius = `${r}px`
+        console.log(br);
+    }
+    rradius();
+    document.body.firstElementChild.firstElementChild.firstElementChild.addEventListener('click', () => {
+        randomcol();
+        rradius();
+    });
+</script>
+</html>
