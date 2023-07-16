@@ -103,19 +103,23 @@ let jokes = [
     "Why did the tomato turn red? Because it saw the salad dressing.",
     "What do you call a sleeping dinosaur? A dino-snore!",
     "What's brown and sticky? A stick."
-  ];
-  
-  // To access the jokes, you can use jokes[0], jokes[1], and so on.
+];
 
-let putjoke = ()=>{
-    let a = Math.floor(Math.random()*jokes.length)
+// To access the jokes, you can use jokes[0], jokes[1], and so on.
+let cat = document.getElementById("catmeme").style.opacity = ".01";
+cat = document.getElementById("catmeme").muted = true;
+
+let putjoke = () => {
+    let a = Math.floor(Math.random() * jokes.length)
     let main = document.getElementById("joker");
     main.innerHTML = jokes[a];
-    let j =jokes.pop(a-1,a);
+    let j = jokes.pop(a - 1, a);
     console.log(j)
 
-    console.log(a , jokes.length)
-    if(jokes.length == 0){
-        main.innerHTML = "You readed upto 100 jokes"
+    console.log(a, jokes.length)
+    if (jokes.length == 0) {
+        main.innerHTML = "You readed upto 100 jokes , Database is limited"
+        let cat = document.getElementById("catmeme").style.opacity = "1"
+        cat = document.getElementById("catmeme").muted = false;
     }
 }
