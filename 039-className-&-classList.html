@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>className & classList</title>
+</head>
+<style>
+    .style{background-color: rgb(90, 90, 90);color: black;display: grid;place-items: center;border-radius: 20px;height: 200px;text-align: center;font-family:monospace;font-size: 30px;}.red{background-color: rgb(129, 11, 11);color: white;}
+    .blue{background-color: rgb(36, 80, 107);color: black;}
+</style>
+<body>
+    <div id="box" class="style red"><h1>Hola</h1></div>
+</body>
+<script>
+    console.log(box.classList);
+    //className >>> to insert classes  --> itremoves previous all classes
+    box.className = "style blue"
+    //classList >> list all classes
+    console.log(box.classList);
+
+    //remove class
+    box.classList.remove("blue")
+
+    //add class
+    box.classList.add("red")
+
+    //toggle class >> if toggled then remove and if not toggled then add
+    box.classList.toggle("red")
+    box.classList.toggle("blue")
+</script>
+</html>

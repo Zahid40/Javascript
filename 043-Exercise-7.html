@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<style>
+    *{box-sizing: border-box;font-family: monospace;text-align: center;padding: 0;margin: 0;}
+    body{display: grid;place-items: center;padding: 30px;}
+    h1{font-size: 30px;background: burlywood;padding: 10px;width: 500px;border-top-left-radius: 180px;border-top-right-radius: 80px;}
+    #d1{background-color: darkgrey;padding: 20px;text-align: end;width: 500px;border-bottom-left-radius: 380px;border-bottom-right-radius: 40px;}
+    button{padding: 10px;width: 100px;margin-top: 20px;border: 0;border-radius: 10px;}
+    #div2{display: flex;}
+    .col{width: 30px;height: 30px;background-color: aquamarine;border-radius: 40px;border: 2px rgb(127, 127, 127) solid;margin: 10px;}
+    #color1{background-color: #F31559;}
+    #color2{background-color: #1A5D1A;}
+    #color3{background-color: #1D5D9B;}
+    #color4{background-color: #6528F7;}
+    #color5{background-color: #F86F03;}
+</style>
+<body>
+    <h1>Super-Super</h1>
+    <div id="d1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nam assumenda debitis dignissimos laudantium, quis doloribus aliquam consequatur, aspernatur possimus eius beatae in perspiciatis nihil officiis esse, incidunt consequuntur dolorum!</p>
+        <button id="btn1">Header</button>
+        <button id="btn2">Text</button>
+    </div>
+    <div id="div2">
+        <div id="color1" class="col"></div>
+        <div id="color2" class="col"></div>
+        <div id="color3" class="col"></div>
+        <div id="color4" class="col"></div>
+        <div id="color5" class="col"></div>
+    </div>
+</body>
+<script>
+    let head = document.getElementsByTagName("h1")[0];
+    let para = document.getElementsByTagName("p")[0];
+    let div = document.getElementById("d1");
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let color1 = document.getElementById("color1");
+    let color2 = document.getElementById("color2");
+    let color3 = document.getElementById("color3");
+    let color4 = document.getElementById("color4");
+    let color5 = document.getElementById("color5");
+
+    btn1.addEventListener('click', function(){
+        head.innerText = prompt("Enter Header here");
+    })
+    btn2.addEventListener('click', function(){
+        para.innerText = prompt("Enter paragraph here");
+    })
+
+    let color0f = ()=>{
+        head.style.background = "grey"
+        div.style.background = "grey"
+    }
+    let color1f = ()=>{
+        head.style.background = "#F31559"
+        div.style.background = "#FF52A2"
+    }
+    let color2f = ()=>{
+        head.style.background = "#1A5D1A"
+        div.style.background = "#AAC8A7"
+    }
+    let color3f = ()=>{
+        head.style.background = "#1D5D9B"
+        div.style.background = "#75C2F6"
+    }
+    let color4f = ()=>{
+        head.style.background = "#6528F7"
+        div.style.background = "#A076F9"
+    }
+    let color5f = ()=>{
+        head.style.background = "#F86F03"
+        div.style.background = "#FFA41B"
+    }
+    color1.addEventListener('mouseenter',function(){
+        color1.addEventListener('mouseenter',color1f)
+        let a = color1.addEventListener('click',color1f)
+        let b = color1.addEventListener("mouseout",color0f)
+    })
+    color2.addEventListener('mouseenter',color2f)
+    color2.addEventListener("mouseout",color0f)
+    color3.addEventListener('mouseenter',color3f)
+    color3.addEventListener("mouseout",color0f)
+    color4.addEventListener('mouseenter',color4f)
+    color4.addEventListener("mouseout",color0f)
+    color5.addEventListener('mouseenter',color5f)
+    color5.addEventListener("mouseout",color0f)
+</script>
+</html>

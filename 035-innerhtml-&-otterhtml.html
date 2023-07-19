@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    helloworld
+    <span id="s1">Hi i am span</span>
+    <span id="s2">Hi i am span 2</span>
+    <!-- hidden span  -->
+    <span id="s3" hidden>i am hidden</span>
+</body>
+    <script>
+        //prints element with html
+        console.log(document.getElementsByTagName('span'));
+
+        //prints as an object with properties
+        console.dir(document.getElementsByTagName('span'));
+
+        //innerHTML
+        let a = document.getElementById("s1");
+        console.log(a.innerHTML);
+        a.innerHTML = "<i>yes</i>"
+        
+        //outterHTML
+        let b = document.getElementById("s2");
+        console.log(b.outerHTML);
+        b.outerHTML = "<h1>Heading</h1>"
+
+        //data or nodeValue >> to get inside content
+        console.log(document.body.firstChild.data)
+        console.log(document.body.firstChild.nodeValue)
+
+        //textContent >> to get all txt from element
+        console.log(document.body.textContent);
+
+        //unhide hidden
+        document.getElementById("s3").hidden = false;
+        document.getElementById("s3").innerHTML = "hidden caught by js";
+    </script>
+</html>

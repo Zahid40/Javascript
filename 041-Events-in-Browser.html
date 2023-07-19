@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="constainer" onmouseenter="console.log('Mouse Entered in constainer')">
+        <button onclick="console.log('button click')">Button</button>
+    </div>
+</body>
+<script>
+    let ele = document.getElementsByTagName('button')[0];
+    ele.onclick = ()=>{
+        console.log("Button clicked func override by js");
+    }
+</script>
+</html>

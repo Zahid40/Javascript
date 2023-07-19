@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjecent</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        background-color: black;
+        color: white;
+    }
+    #div1{
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        background-color: rgb(24, 72, 161);
+        height: 200px;
+        width: 80%;
+    }
+    #div2{display: grid;
+        place-items: center;
+        border-radius: 20px;
+        background-color: rgb(154, 43, 69);
+        height: 100px;
+        width: 80%;
+    }#div3{border-radius: 20px;
+        background-color: rgb(15, 74, 10);
+        height: 50px;
+        width: 80%;}
+</style>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+</body>
+<script>
+    div2.insertAdjacentHTML('beforeBegin','<div class="test">beforebegain</div>');
+    div2.insertAdjacentHTML('beforeEnd','<div class="test">beforeend</div>');
+    div2.insertAdjacentHTML('afterBegin','<div class="test">afterbegain</div>');
+    div2.insertAdjacentHTML('afterEnd','<div class="test">afterend</div>');
+</script>
+</html>

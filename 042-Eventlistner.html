@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventListner</title>
+</head>
+<style>
+    .div1{box-sizing: border-box;background-color: grey;width: 100%;height: 200px;display: flex;justify-content:end;align-items: end;padding: 20px;border-radius: 20px;}#btn{height: 50px;width: 100px;border-radius: 20px;border: 0;}.red{background-color: rgb(117, 24, 24);color: black;}.green{background-color: rgb(12, 61, 12);color: black;}.text{color: white;font-family: monospace;font-weight: 800;}
+</style>
+<body>
+        <div class="div1">
+            <button id="btn" class="">Click Me</button>
+        </div>
+</body>
+<script>
+    let div = document.getElementsByTagName('div')[0];
+
+    let btn = document.getElementById("btn");
+    btn.addEventListener('click',function x(e){
+        console.log(e)  // Event-Object >> returns information about that element
+        console.log(e.target , e.clientX , e.clientY) // return targated element
+        console.log("Clicked");
+        // div.classList.toggle("green")
+        // btn.classList.toggle("red")
+        // btn.classList.toggle("text")
+    })
+/*
+    //another-way
+    let x = ()=>{
+        console.log("Clicked");
+        div.classList.toggle("green")
+        btn.classList.toggle("red")
+        btn.classList.toggle("text")
+    }
+    let y = ()=>{
+        console.log("Clicked");
+        div.classList.toggle("red")
+        btn.classList.toggle("green")
+        btn.classList.toggle("text")
+    }
+    //add multiple eventlistner
+    btn.addEventListener('click',x)
+    btn.addEventListener('click',y)
+
+    //removes eventlistner of same function
+    btn.removeEventListener('click',y)
+*/
+</script>
+</html>

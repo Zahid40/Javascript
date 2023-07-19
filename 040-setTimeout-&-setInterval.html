@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout & setIntrval</title>
+</head>
+<body>    
+</body>
+<script>
+    document.write("Hello");
+    let sum = (a,b)=>{
+        console.log("Sum is " + (a+b));
+        document.body.innerHTML = `<h1>The sum is ${a+b}</h1>`
+        return a+b;
+    };
+
+    //setTimeout  >> a function runs only one time after delay timed
+    //setTimeout(function() , delay-time , func-arrgument-1 , func-arrg-2 ,...funcarr-n);
+    let a = setTimeout(sum,3000,2,4);
+    console.log(a)   //returns >> timer-idc
+
+    //to clear setTimeout() function >> removed
+    clearTimeout(a);
+
+    //setInterval  >> a function runs infinitley times after delay timed
+    let b = setInterval(function helloprint(){
+        document.body.insertAdjacentText("beforeend",`_Hello_`);
+    },200)
+    console.log(b); // return >> timer-id
+
+    //to clear setInterval() function >> removed
+    clearInterval(b);
+</script>
+</html>
