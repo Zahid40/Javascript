@@ -1,0 +1,24 @@
+<script>
+    async function zahid(){
+        let Delhi_wether = new Promise((resolve,reject)=>{
+            setInterval(()=>{
+                resolve("33 deg")
+            },4000)
+        })
+        let Mumbai_wether = new Promise((resolve,reject)=>{
+            setInterval(()=>{
+                resolve("27 deg")
+            },8000)
+        })
+
+        console.log("Featching Delhi Weather , Pleases Wait ........")
+        let DelhiW = await Delhi_wether
+        console.log("Featching Delhi Weather is = " , DelhiW)
+        console.log("Featching Mumbai Weather , Pleases Wait ........")
+        let MumbaiW = await Mumbai_wether
+        console.log("Featching Mumbai Weather is = " , MumbaiW)
+
+        return [DelhiW,MumbaiW]
+    }
+console.log(zahid());
+</script>
