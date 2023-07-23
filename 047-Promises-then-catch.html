@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Promises</title></head><body></body>
+<script>
+    let p1 = new Promise((resolve,reject)=>{
+        console.log("Promises is pending");
+        setTimeout(()=>{
+            // console.log("Promise Resolved and fullfilled")
+            resolve(true)
+        }, 2000)
+    })
+    let p2 = new Promise((resolve,reject)=>{
+        console.log("Promises is pending");
+        setTimeout(()=>{
+            // console.log("Promise rejected")
+            reject(new Error("Promise Rejected"))
+        }, 2000)
+    })
+    console.log(p1,p2)
+
+    //to get the value
+    p1.then((value)=>{
+        console.log(value)
+    })
+    //to catch the error
+    /*p2.catch((error)=>{
+        console.log("some Error occured")  //error handdling
+    })*/
+
+    //catching the error by then() method
+    p2.then((value)=>{
+        console.log(value);
+    },(error)=>{
+        console.log(error + " = Error here");
+    })
+</script>
+</html>
