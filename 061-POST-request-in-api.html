@@ -1,0 +1,26 @@
+<script>
+    const createtodo = async()=>{
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                title: 'hello',
+                body: 'dele',
+                userId: 5,
+            })
+        }
+    
+        let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+        let resp = await p.json()
+        // console.log(resp);
+        return resp
+    }
+    const main_function = ()=>{
+        let todo = createtodo();
+        console.log(todo);
+    }
+    main_function();
+    
+</script>

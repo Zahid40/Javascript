@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+</head>
+<body>
+    
+</body>
+<script>
+    try{
+        let age = prompt("What is your age ?");
+        age = Number.parseInt(age);
+        if(age >= 120){
+            throw new ReferenceError("Invalid age criteria")
+        }
+    }catch(error){
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+    }
+    console.log("Running");
+</script>
+</html>

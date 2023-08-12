@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let p = fetch("https://goweather.herokuapp.com/weather/India" , [options]) // options >> for which type of request is ( get , post etc) by default ( gets)
+
+    // this type of syntex use when we provide header
+    //let res = fetch( url , {
+    //     headers : {
+    //         Authentication : 'secrete code'
+    //     }
+    // })
+
+    let p = fetch("https://goweather.herokuapp.com/weather/India")
+    p.then((response) => {
+        console.log(response.status) //returns http status like 200,404 etc
+        console.log(response.ok)  // return connection in boolean.
+        console.log(response.headers) // return headers in response        
+        return response.json() //we can use differnt type of response data = json , text , etc. but only one time
+    }).then((value2) => {
+        console.log(value2);
+    })
+
+</script>
+</html>

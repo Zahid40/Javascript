@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 09</title>
+</head>
+
+<body style="background-color: rgb(27, 27, 27)">
+</body>
+<script>
+    let onload_file = (source) => {
+        return new Promise((resolved, reject) => {
+            let script = document.createElement('script');
+            script.type = "text/javascript"
+            script.src = source;
+            document.body.append(script);
+                script.onload = () => {
+                    resolved(1)
+                }
+                script.onerror = () => {
+                    reject(Error);
+                }
+            })
+        }
+        let drr = async()=>{
+        console.log(new Date().getMilliseconds());
+            await onload_file("./text-ex-09.js").then((value) => {
+                console.log("Script loaded succusfully")
+            }, (err) => {
+                console.log("Script not loaded \n try again !!!")
+            })
+        console.log(new Date().getMilliseconds());
+
+        console.log("Hiii")
+
+    }
+    drr();
+</script>
+
+</html>

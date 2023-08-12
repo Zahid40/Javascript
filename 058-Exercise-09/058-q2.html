@@ -1,0 +1,22 @@
+<script>
+
+    let a = () => {
+        return new Promise((resolved, reject) => {
+            console.log('solving in 3s');
+            setTimeout( () => {
+                 reject(new Error("This is invalid statement"))
+            }, 3000);
+        })
+    }
+    let p = async ()=>{
+        try{
+            let c = await a()
+            console.log(c)
+        }catch(err){
+            console.log("Error ocuure wihle ruuning , error handled")
+            console.log(err.message)
+        }
+    }
+
+    p();
+</script>
