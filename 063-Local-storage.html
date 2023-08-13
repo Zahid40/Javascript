@@ -1,0 +1,26 @@
+<script>
+    let key = prompt("Enter Key")
+    let value = prompt("Enter value")
+    //setItem == use to insert item in local storage
+    localStorage.setItem(key,value);
+    //getItem == use to get value at key
+    console.log(`The value at key ${key} is ${localStorage.getItem(key)}`);
+    //removeItem == use to remove value at key and without value kay not exists
+    if(key == "zahid"){
+        localStorage.removeItem(key)
+    }
+    //clear == use to clear whole localstorage
+    if(key == 0){
+        localStorage.clear();
+    }
+    //key(index) == use to get key at index 
+    //length == use to find total number of key in local storage
+    console.log(localStorage.length)
+    console.log(localStorage.key(2))
+
+    //for listing when key value changed
+    window.onstorage=(e)=>{
+        alert("Changed")
+        console.log(e);
+    }
+</script>

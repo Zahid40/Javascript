@@ -1,0 +1,19 @@
+<script>
+    console.log(document.cookie);
+    document.cookie = "name5=Zahid40581"  //this is called setcall
+    let key = prompt("enter your key");
+    let value = prompt("Enter value ");
+    // document.cookie = `${key}=${value}`;   
+    //$@%=></\  these charecter makes problems while creting cookie so we use "encodeURIComponent" it converts these special charecter to URIcode and "decodeURIComponent" use for decode these code.
+    document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;   
+    console.log(document.cookie);
+
+    //cookie options  >> path , expires
+    document.cookie = "kite=89;path=http://192.168.0.102:5500/062-Cookies.html;expires=tue,29 sept 2025 05:18 GMT"  //this is not mean you set multiple cookies at one time these are options (path,expires)
+    console.log(document.cookie)
+
+    //cokies limit 
+    // name="value"  >> limits upto 4kb
+    // total number of cookies depens on browser to browser ( 20 + )
+
+</script>

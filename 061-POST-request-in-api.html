@@ -1,15 +1,11 @@
 <script>
-    const createtodo = async()=>{
+    const createtodo = async(todo)=>{
         let options = {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
             },
-            body: JSON.stringify({
-                title: 'hello',
-                body: 'dele',
-                userId: 5,
-            })
+            body: JSON.stringify(todo)
         }
     
         let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
@@ -17,9 +13,21 @@
         // console.log(resp);
         return resp
     }
-    const main_function = ()=>{
-        let todo = createtodo();
-        console.log(todo);
+    const getTodo = async (id)=>{
+        let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        let r= await response.json()
+        return r
+    }
+
+    const main_function = async ()=>{
+        let todo = {
+                title: 'hello',
+                body: 'dele',
+                userId: 5,
+            }
+        let todo_r = await createtodo(todo);
+        console.log(todo_r);
+        console.log( await getTodo(10));
     }
     main_function();
     
