@@ -1,0 +1,17 @@
+<script>
+    let a = {
+        name : "Zahid",
+        age : 18
+    }
+    console.log(a)
+
+    let p = {
+        run : ()=>{
+            console.log("run in p");
+        }
+    }
+    p.run();
+
+    a.__proto__ = p;  //this can allows to use p's properties in a
+    a.run();
+</script>

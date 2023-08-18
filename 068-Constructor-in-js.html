@@ -1,0 +1,17 @@
+<script>
+    class railwayform{
+        constructor(givenname , trainno , address){
+            this.name = givenname;
+            this.trainno = trainno;
+            this.add = address;
+        }
+        submit(){
+            console.log(this.name +  " Your Form Submitted for train " + this.trainno);
+        }
+        cancle(){
+            console.log(this.name +" Your Form Cancelled for train " + this.trainno);
+        }
+    }
+
+    let z = new railwayform("Zahid",5757575,"delhi").submit()
+</script>

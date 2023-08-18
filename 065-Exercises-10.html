@@ -7,26 +7,9 @@
     <title>Dog facts</title>
     <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-color: #150028;
-            color: whitesmoke;
-            font-family: monospace;
-            align-items: center;
-        }
-
-        .icon {
-            border: none;
-            background-color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
-        }
+        * { box-sizing: border-box;padding: 0;margin: 0;}
+        body {background-color: #150028;color: whitesmoke;font-family: monospace;align-items: center;}
+        .icon {border: none;background-color: white;width: 70px;height: 70px;border-radius: 100%;}
     </style>
 </head>
 
@@ -58,9 +41,6 @@
         };
         a.append(btn)
     }
-
-
-
     let newfact = () => {
         let p = fetch("https://dogapi.dog/api/v2/facts")
         let ip = fetch("https://dog.ceo/api/breeds/image/random")

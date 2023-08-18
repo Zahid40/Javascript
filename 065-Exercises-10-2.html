@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>note save to</title></head><body><h1 id="note"></h1></body>
+<script>
+    let note = "mera note";
+    localStorage.setItem("note_user",note);
+    
+    //fetch my note 
+    document.getElementById('note').innerHTML = localStorage.getItem("note_user");
+    console.log(localStorage);
+    //delet my note
+    let btn = document.createElement('button')
+    btn.innerHTML = " Delete you note"
+    document.body.append(btn)
+    // btn.addEventListener('click',localStorage.removeItem("note_user"))
+    btn.onclick = function() {
+        localStorage.removeItem("note_user")
+    } 
+</script>
+</html>
+

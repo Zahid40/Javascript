@@ -1,0 +1,25 @@
+<script>
+    class railwayform{
+        submit(){
+            console.log(this.name +  " Your Form Submitted for train " + this.trainno);
+        }
+        cancle(){
+            console.log(this.name +" Your Form Cancelled for train " + this.trainno);
+        }
+        fill(givenname , trainno){
+            this.name = givenname;
+            this.trainno = trainno;
+        }
+    }
+
+    let zahidform = new railwayform()
+    zahidform.fill("Zahid" , 56789)
+    zahidform.submit();
+    let jdform = new railwayform();
+    let jdform2 = new railwayform();
+    jdform.fill("Jd" , 222222)
+    jdform2.fill("Jaideep",56789)
+    jdform.submit();
+    jdform2.submit();
+    jdform.cancle();
+</script>
