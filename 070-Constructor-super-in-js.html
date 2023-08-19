@@ -1,0 +1,37 @@
+<script>
+    class emp{
+        constructor(name){
+            this.name = name;
+        }
+        login(){
+            console.log(`${this.name} logged in successfully`);
+        }
+        logout(){
+            console.log(`${this.name} logged out succussfully`)
+        }
+        request_leave(leaves){
+            console.log(`${this.name} request leave for ${leaves} days so, we grant you.`)
+        }
+    }
+
+    class programmer extends emp{
+        coffee(){
+            console.log(`${this.name} wants coffee`);
+        }
+
+        request_leave(leaves){
+            super.request_leave(leaves+1)
+            console.log("one extra day leave")
+
+        }
+    }
+
+    let e2 = new emp("Viiii")
+    e2.login();
+    e2.request_leave(3);
+
+    let e1 = new programmer("Zahid");
+    e1.login()
+    e1.request_leave(3);   // output : 4 because overwrite by class proggrammer with keyword <<super>> in request leave.
+
+</script>

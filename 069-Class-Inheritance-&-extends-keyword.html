@@ -1,0 +1,28 @@
+<script>
+    class animal{
+        constructor(name , color){
+            this.name = name;
+            this.color = color;
+        }
+        limbs(){
+            console.log(`${this.name} Having four limbs`)
+        }
+        eyes(){
+            console.log(`${this.name} having 2 eyes`);
+        }
+    }
+
+    class dog extends animal{
+        live(){
+            console.log(`${this.name} live in homes as pets`);
+        }
+    }
+
+    let tiger = new animal("Baghira","Orange with black strips")
+    tiger.limbs();
+    tiger.eyes();
+
+    let moti = new dog("Moti", "white");
+    moti.limbs();
+    moti.live();
+</script>
