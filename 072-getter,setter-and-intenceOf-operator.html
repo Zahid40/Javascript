@@ -1,0 +1,23 @@
+<script>
+    class register_name{
+        constructor(bame){
+            this._bame = bame;
+        }
+        get bame(){
+            return this._bame;
+        }
+        set bame(newbame){
+            this._bame = newbame;
+        }
+    }
+
+    let p = new register_name("Joker");
+    console.log(p.bame);
+    p.bame = "Batman"
+    console.log(p.bame);
+
+    console.log(p instanceof register_name); // it tells is your object is made up of that class or not.
+    let c = 78;
+    console.log(c instanceof register_name); // this is not 
+    
+</script>

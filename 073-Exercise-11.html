@@ -1,0 +1,55 @@
+<script>
+    class complex_number{
+        constructor(real , img){
+            this._real = real;
+            this._img = img;
+            console.log(`The complex number is ${this._img}i + ${this._real}.`);
+        }
+        add(num){
+            this._real = this._real + num._real;
+            this._img = this._img + num._img;
+        }
+        get real(){
+            return this._real;
+        }
+        get img(){
+            return  this._img;
+        }
+        set real(newreal){
+            this._real = newreal;
+        }
+        set img(newimg){
+            this._img = newimg;
+        }
+    }
+    let n = new complex_number(8,7);
+    let m = new complex_number(2,3);
+    m.real = 56;
+    m.img = 78
+    n.add(m);
+    console.log(`n + m = ${n._img}i + ${n._real}`);
+
+    // class human{
+    //     heart(){
+    //         console.log("Having heart mostely on left side")
+    //     }
+    //     brain(){
+    //         console.log("Having most advance brains")
+    //     }
+    // }
+
+    // class student extends human{
+    //     cloth(){
+    //         console.log("They have dress code")
+    //     }
+    //     brain(){
+    //         console.log("Having active learning brain")
+    //     }
+    // }
+
+    // let paresh = new student();
+    // paresh.heart();
+    // paresh.brain();
+    // paresh.cloth();
+    // console.log(paresh instanceof human);
+</script>

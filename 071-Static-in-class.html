@@ -1,5 +1,20 @@
 <script>
     class school{
-        construction 
+        constructor(name){
+            this.name = school.capatilized_fst(name);
+        }
+        what_is_name(){
+            console.log(`Student name is ${this.name}`);
+        }
+        static capatilized_fst(name){
+            return name.charAt(0).toUpperCase() + name.substr(1,name.length).toLowerCase();
+        }
     }
+
+    let p = new school("ZaHiD");
+    p.what_is_name();
+
+    //but this is not running because capatalized function was static it can only acess by <<[class name].capalized>>> method.
+    // p.capatilized_fst("ZahID");  //cause error
+
 </script>
