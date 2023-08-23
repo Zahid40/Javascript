@@ -1,0 +1,26 @@
+<script>
+    let a = "good global"
+    let f = ()=>{
+        let a = "good hell"
+        let he = ()=>{
+            console.log(a);
+        }
+        a = "good hell_after"
+        return he();
+    }
+    console.log(f()); //output : good hell_after >> because return returns the value and all variable's references not exact value.
+
+
+    let x = ()=>{
+        let a = 1
+        console.log(a);
+        let y = ()=>{
+            let a = 2
+            console.log(a);
+            let z = ()=>{
+                let a = 3
+                console.log(a);
+            };z()
+        };y()
+    };x()
+</script>

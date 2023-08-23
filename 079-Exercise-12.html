@@ -1,0 +1,38 @@
+<script>
+    //Q1
+    // let a = (txt)=>{
+    //     return new Promise((resolved , reject)=>{
+    //         setTimeout(()=>{
+    //             resolved(txt);
+    //         },1000)
+    //     })
+    // }
+    // (async ()=>{
+    //     let text = await a("Hello");
+    //     console.log(text);
+    //     text = await a("world");
+    //     console.log(text);
+    // })();
+
+    //Q2
+    let avg = [2 , 4 ,5]
+    let avg_sum = (a , b , c)=>{
+        return a + b + c;
+    }
+    console.log(avg_sum(...avg));
+
+    //Q3
+    function f(n){
+        return new Promise((resolved , reject)=>{
+            setInterval(()=>{
+                resolved(3)
+            },n*1000)
+        })
+    }
+    (async()=>{
+        let time = 10
+        let k = await f(time);
+        console.log(`Hello after ${time} seconds with ${k}`);
+    })();
+
+</script>

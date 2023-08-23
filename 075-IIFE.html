@@ -1,0 +1,19 @@
+<script>
+    let p = ()=>{
+        return new Promise((resolved , reject)=>{
+            setTimeout(()=>{
+                resolved(2);
+            },2000)
+        })
+    }
+
+    //iife == imeddiatly invoked function expression
+    (async ()=>{
+        let b = await p();
+        console.log(b);
+        let c = await p();
+        console.log(c);
+        let d = await p();
+        console.log(d);
+    })()
+</script>
